@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.left-section {
+  width: 50%;
+  background: var(--Gray-Scale-White, #FFF);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+form {
+  position:relative;
+  left:30px;
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.left-section h1 {
+  color: var(--Gray-900, #18191C);
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  position: relative;
+  left: 250px;
+}
+
+.left-section p {
+  color: var(--Gray-600, #5E6670);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; 
+  text-align: center;
+  position: relative;
+  left: -90px;
+}
+
+.input-field {
+  width: 50%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.eye-icon {
+  position: relative;
+  right: -270px;
+  top: 3px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.create-account {
+  width: 50%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.facebook-button, .google-button {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.right-section {
+  width: 50%;
+  background: linear-gradient(to right, #0a0a23, #2c3e50);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  text-align: center;
+}
+
+.stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.number {
+  font-size: 24px;
+  font-weight: bold;
+}
