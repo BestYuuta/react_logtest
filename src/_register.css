@@ -1,12 +1,13 @@
 .container {
   display: flex;
   margin: 0;
-  min-height: 100vh;
+  height: 92.8vh;
 }
 
 .logo {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
+  height: 0%;
   position: relative;
   left: 12%;
   top: 45px;
@@ -53,7 +54,7 @@
   margin-bottom: 10px;
 }
 
-p {
+.leftSection p {
   color: var(--Gray-600, #5E6670);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -73,26 +74,13 @@ p {
 
 .select {
   position: relative;
-  left: 230px;
-  top: 20px
+  left: 30%;
+  top: 25px
 }
 
 .input-group {
   margin-top: 0;
   display: flex;
-  gap: 20px;
-}
-
-input {
-  width: 96%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.inputRow {
-  display: inline;
   gap: 20px;
 }
 
@@ -119,6 +107,8 @@ input {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: large;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .or-text {
@@ -146,11 +136,11 @@ input {
 }
 
 .rightSection {
-  width: 50%;
+  width: 60%;
   margin: 0;
 }
 
-.rightSection svg {
+.svg-container {
   position: relative;
   top: 0;
   left: 0;
@@ -159,15 +149,35 @@ input {
 }
 
 .stats {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  width: 40%;
+  top: 45%;
+  left: 55%;
   color: #FFF;
-  position: relative;
+  font-size: 40px;
 }
 
-.stats h4 {
-  font-size: 35px;
-  font-weight: 400;
+.stats-row {
+  display: flex;
+  justify-content: left;
+  gap: 100px;
+  margin: 0;
+}
+
+.stats-row h3 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.stats-row p {
+  font-size: 16px;
+  margin: 5px 0;
+  opacity: 0.7;
+}
+
+
+footer {
+  color: #FFF;
+  background: linear-gradient(90deg, rgb(98, 158, 255), #9a57ff, purple);
+  padding: 10px;;
 }

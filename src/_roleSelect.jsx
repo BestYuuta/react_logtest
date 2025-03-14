@@ -5,11 +5,12 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-export default function AccountSelect() {
+  const AccountSelect = ({ onAccoutTypeChange }) => {
   const [accountType, setAccountType] = React.useState("");
 
-  const handleChange = (event) => {
+  const handleRoleChange = (event) => {
     setAccountType(event.target.value);
+    onAccoutTypeChange(event.target.value);
   };
 
   return (
@@ -21,7 +22,7 @@ export default function AccountSelect() {
           id="account-select"
           value={accountType}
           label="Account Type"
-          onChange={handleChange}
+          onChange={handleRoleChange}
         >
           <MenuItem value="candidate">Candidate</MenuItem>
           <MenuItem value="employer">Employer</MenuItem>
@@ -30,3 +31,5 @@ export default function AccountSelect() {
     </Box>
   );
 }
+
+export default AccountSelect;
