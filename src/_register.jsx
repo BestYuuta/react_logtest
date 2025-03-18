@@ -190,7 +190,7 @@ const SignupPage = () => {
         {/* FOOTER */}
       </div>
         <footer>
-          <div>
+          <div class = "p-">
             <p>© 2025 Group 4 23.12 - Danang University of Technology - PBL3 - Find Jobs Website</p>
           </div>
         </footer>
