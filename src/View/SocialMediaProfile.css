@@ -1,0 +1,93 @@
+/* SocialMediaProfile.css */
+
+/* Phần gốc */
+.rootContainer {
+  min-height: 100vh;
+  background-color: var(--mui-bg-default); /* Dùng nếu muốn, 
+                                              nhưng MUI đã set background mặc định */
+}
+
+/* Header */
+.headerAppBar {
+  background-color: #fff !important;
+  color: #000 !important;
+  border-bottom: 1px solid #ddd !important;
+}
+
+.headerToolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoImage {
+  width: 32px;
+  height: 32px;
+}
+
+.progressText {
+  color: gray;
+}
+
+/* Tabs container */
+.tabsContainer {
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+
+/* Nội dung chính */
+.mainContent {
+  padding: 2rem 0;
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* Paper chứa form */
+.paperContainer {
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+/* Row hiển thị 1 dòng social link */
+.socialLinkRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 8px;
+}
+
+.platformSelect {
+  width: 180px;
+}
+
+.linkTextField {
+  flex: 1;
+}
+
+/* Nút điều hướng */
+.navigationButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.navButton {
+  width: 120px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 16px 0;
+  color: gray;
+  font-size: 14px;
+}
