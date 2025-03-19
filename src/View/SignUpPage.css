@@ -1,19 +1,23 @@
-.container {
+.signup-container {
   display: flex;
   margin: 0;
-  height: 92.8vh;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.logo {
+.signup-logo {
   display: flex;
   flex-direction: row;
-  height: 0%;
+  height: 10%;
   position: relative;
   left: 12%;
   top: 45px;
 }
 
-.logo h1 {
+.signup-logo h1 {
   color: var(--Gray-900, #18191C);
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 24px;
@@ -23,8 +27,10 @@
   margin: 3px;
 }
 
-.leftSection {
+.signup-leftSection {
   width: 50%;
+  height: 100%;
+  box-sizing: border-box;
   margin: 0;
   display: flex;
   background: var(--Gray-Scale-White, #FFF);
@@ -37,7 +43,7 @@
   gap: 20px;
 }
 
-.hdCreateAccount {
+.signup-hdCreateAccount {
   display: inline-block;
   gap: 10px;
   align-items: center;
@@ -54,7 +60,7 @@
   margin-bottom: 10px;
 }
 
-.leftSection p {
+.signup-leftSection p {
   color: var(--Gray-600, #5E6670);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -65,26 +71,26 @@
   opacity: 0.7;
 }
 
-.title-row {
+.signup-title-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
-.select {
+.signup-select {
   position: relative;
-  left: 30%;
-  top: 25px
+  left: 20%;
+  top: 25px;
 }
 
-.input-group {
+.signup-input-group {
   margin-top: 0;
   display: flex;
   gap: 20px;
 }
 
-.terms {
+.signup-terms {
   color: var(--Gray-500, #767F8C);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -94,16 +100,17 @@
   padding: 20px 0 20px 0;
 }
 
-.terms input {
+.signup-terms input {
   width: auto;
   margin: 0;
 }
 
-.create-account {
+.signup-create-account {
   width: 100%;
   background: #007bff;
   color: white;
   padding: 16px;
+  margin-bottom: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -111,18 +118,18 @@
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.or-text {
+.signup-or-text {
   text-align: center;
   margin: 10px 0;
   opacity: 0.6;
 }
 
-.social-buttons {
+.signup-social-buttons {
   display: flex;
   justify-content: center;
 }
 
-.google {
+.signup-google {
   display: flex;
   width: 258px;
   padding: 12px 24px;
@@ -135,49 +142,44 @@
   cursor: pointer;
 }
 
-.rightSection {
+.signup-rightSection {
   width: 60%;
   margin: 0;
+  box-sizing: border-box;
 }
 
-.svg-container {
+.signup-svg-container {
   position: relative;
   top: 0;
   left: 0;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
 }
 
-.stats {
+.signup-stats {
   position: absolute;
   width: 40%;
-  top: 45%;
+  top: 55%;
   left: 55%;
   color: #FFF;
   font-size: 40px;
 }
 
-.stats-row {
+.signup-stats-row {
   display: flex;
   justify-content: left;
   gap: 100px;
   margin: 0;
+  padding: 0;
 }
 
-.stats-row h3 {
+.signup-stats-row h3 {
   font-size: 30px;
   margin: 0;
 }
 
-.stats-row p {
+.signup-stats-row p {
   font-size: 16px;
   margin: 5px 0;
   opacity: 0.7;
-}
-
-
-footer {
-  color: #FFF;
-  background: linear-gradient(90deg, rgb(98, 158, 255), #9a57ff, purple);
-  padding: 10px;
 }

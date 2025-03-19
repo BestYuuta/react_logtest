@@ -1,36 +1,15 @@
-import React, { useState } from "react";
-import "./_register.css";
+import React from "react";
+import "./LoginPage.css";
 import TextField from "@mui/material/TextField";
-import RoleSelect from "./_roleSelect";
-import Password from "./_pw";
-import ConfirmPw from "./_confirmPw";
+import Password from "../Components/_pw";
+import { Link } from "react-router-dom";
 
-const SignupPage = () => {
-  const [accountType, setAccountType] = useState({
-    fullName: "Full Name",
-    username: "Username",
-    email: "Email address",
-  });
-  const handleRoleChange = (role) => {
-    if (role === "employer") {
-      setAccountType({
-        fullName: "Company Name",
-        username: "Company Username",
-        email: "Company Email",
-      });
-    } else if (role === "candidate") {
-      setAccountType({
-        fullName: "Full Name",
-        username: "Username",
-        email: "Personal Email",
-      });
-    }
-  };
+const LoginPage = () => {
   return (
     <div>
-      <div className="container">
+      <div className="login-container">
         {/* LOGO */}
-        <header className="logo">
+        <header className="login-logo">
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
               <g clipPath="url(#clip0_3264_352)">
                 <path d="M33.751 11.25H6.25098C5.56062 11.25 5.00098 11.8096 5.00098 12.5V32.5C5.00098 33.1904 5.56062 33.75 6.25098 33.75H33.751C34.4413 33.75 35.001 33.1904 35.001 32.5V12.5C35.001 11.8096 34.4413 11.25 33.751 11.25Z" stroke="#0A65CC" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -48,57 +27,40 @@ const SignupPage = () => {
         </header>
 
         {/* LEFT SECTION */}
-        <div className="leftSection">
-          <form className="signup-form">
-          <div className="hdCreateAccount">
-            <div className="title-row">
-              <h2>Create account.</h2>
-              <div className="select">
-                <RoleSelect onAccoutTypeChange={handleRoleChange} />
-              </div>
+        <div className="login-leftSection">
+          <form className="login-form">
+          <div className="login-hdLogin">
+            <div className="login-title-row">
+              <h2>Sign In</h2>
             </div>
-            <p>Already have an account? <a href="./_login.jsx">Log In</a></p>
+            <p>
+                Don't have an account?{" "}
+                <Link to = "/signup">Create Account</Link>
+            </p>
           </div>
-            <div className="input-group">
+            <div className="login-input-group">
               <TextField 
                 sx={{  width: '100%' }}
-                id="name" 
-                label={accountType.fullName} 
-                variant="outlined" 
-              /> 
-              <TextField 
-                sx={{  
-                  width: '100%',
-                }}
-                id="username" 
-                label={accountType.username} 
+                id="email" 
+                label={"Email address"} 
                 variant="outlined" 
               /> 
             </div>
-              <TextField 
-                sx={{  
-                  width: '100%',
-                  mt: 2
-                }}
-                id="email"
-                label={accountType.email} 
-                variant="outlined" 
-              /> 
               <Password sx ={{
                 mt: 2,
                 width: '100%'
               }}/>
-              <ConfirmPw />
-              <div className="terms">
-                <label htmlFor="terms">
-                  <input type="checkbox" id="terms" />
-                  I've read and agree with your <a href="/terms">Terms of Services</a>
+            <div className="login-forgotpw">
+                <label htmlFor="login-terms">
+                    <input type="checkbox" id="forgotpw" />
+                    {" "}Remember me
                 </label>
-              </div>
-            <button className="create-account">Create Account →</button>
-            <p className="or-text">or</p>
-            <div className="social-buttons">
-              <button className="google">
+                <Link to = "/forgotpw">Forgot Password?</Link>
+            </div>
+            <button className="login-signin">Sign In →</button>
+            <p className="login-or-text">or</p>
+            <div className="login-social-buttons">
+              <button className="login-google">
               <img src="src/assets/Google.svg" alt="google" width={20} height={20} />
                 Sign up with Google</button>
             </div>
@@ -106,8 +68,8 @@ const SignupPage = () => {
         </div>
 
         {/* RIGHT SECTION */}
-        <div className="rightSection">
-          <div className="svg-container">
+        <div className="login-rightSection">
+          <div className="login-svg-container">
             <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"  fill="none">
               <defs>
                 <linearGradient id="animatedGradient" x1="499.75" y1="0" x2="499.75" y2="1080" gradientUnits="userSpaceOnUse">
@@ -122,9 +84,10 @@ const SignupPage = () => {
               <path d="M51.5 0H999.5V1080H0L51.5 0Z" fill="url(#animatedGradient)" fill-opacity="0.9"/>
             </svg>
           </div>
-          <div className="stats">
+          <div className="login-stats">
             <p>Over 2 Candidates joined us to have a F U C K I N G JOB</p>
-            <div className="stats-row">
+            <div className="login-stats-row">
+              {/* livejobs */}
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                   <g clip-path="url(#clip0_10_16336)">
@@ -143,6 +106,7 @@ const SignupPage = () => {
                 <h3>100+</h3>
                 <p>Live Jobs</p>
               </div>
+              {/* company */}
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                   <g clip-path="url(#clip0_10_16348)">
@@ -165,6 +129,7 @@ const SignupPage = () => {
                 <h3>1000+</h3>
                 <p>Company</p>
               </div>
+              {/* newjobs */}
               <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                   <g clip-path="url(#clip0_10_16364)">
@@ -186,16 +151,9 @@ const SignupPage = () => {
             </div>
           </div>
         </div>
-
-        {/* FOOTER */}
       </div>
-        <footer>
-          <div class = "p-">
-            <p>© 2025 Group 4 23.12 - Danang University of Technology - PBL3 - Find Jobs Website</p>
-          </div>
-        </footer>
     </div>
   );
 };
 
-export default SignupPage;
+export default LoginPage;

@@ -1,19 +1,11 @@
-// import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import Register from "./_register.jsx";
-// import Login from "./_login.jsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
+import LoginPage from "./View/LoginPage.jsx";
+import SignUpPage from "./View/SignUpPage.jsx";
 
 function App() {
   return (
-    // <Router>
-    //   <Routes>
-    //     <Route path="/" element={<Navigate to="./register.jsx" />} />
-    //     <Route path="/login" element={<Login />} />
-    //     <Route path="/register" element={<Register />} />
-    //   </Routes>
-    // </Router>
-    <div>
-      <Register />
-    </div>
+    <SignUpPage />
   );
 }
 
