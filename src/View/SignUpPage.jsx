@@ -98,7 +98,9 @@ const SignupPage = () => {
                   {" "}I've read and agree with your <a href="/terms">Terms of Services</a>
                 </label>
               </div>
-            <button className="signup-create-account">Create Account →</button>
+              <Link to="/emailverify">
+                <button className="signup-create-account">Create Account →</button>
+              </Link>
             <p className="signup-or-text">or</p>
             <div className="signup-social-buttons">
               <button className="signup-google">

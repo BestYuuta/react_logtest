@@ -49,7 +49,9 @@ const ForgotPw = () => {
                 variant="outlined" 
               /> 
             </div>
-            <button className="forgotpw">Reset Password →</button>
+            <Link to = "/resetpw">
+              <button className="forgotpw">Reset Password →</button>
+            </Link>
             <p className="forgotpw-or-text">or</p>
             <div className="forgotpw-social-buttons">
               <button className="forgotpw-google">
